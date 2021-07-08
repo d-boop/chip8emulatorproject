@@ -54,7 +54,7 @@ impl Cpu {
     }
 
     pub fn tick(&mut self) {
-        // while (std::time::Instant::now() - self.time_elps).as_secs_f64() < 1.0 / 60.0 {}
+        while (std::time::Instant::now() - self.time_elps).as_secs_f64() < 1.0 / 60.0 {}
         self.time_elps = std::time::Instant::now();
 
         self.fetch();
